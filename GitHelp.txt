@@ -1,0 +1,11 @@
+If you want to do practic on your home with GitHub
+1. Create Acount on https://github.com/. Its very easy
+2.Downlaod Git On Your Own Computer. Dont try here, do it at your home
+https://git-scm.com/downloads
+3. Aftre install, its time to configure your GitHub
+
+git config --global user.name "rahat4bitwise"
+git config --global user.email "rahat.iu786@gmail.com"
+git config --list see allConfig
+git config user.name
+git help commit Launching default browser to display html
