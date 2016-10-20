@@ -29,8 +29,10 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 
+Here we are adding for just staging the chnages for commit
+Working copy>staging area>repository
 4. git commit -m "Added GitHelp.txt" #commiting the change and -m is here for message
-
+5. Alternate way of adding and commit 'git commit -a' and enter your message and exit the editor
 Note: It is good practic to fire the check everytime at the end of the day if we have anything to commit or not.
 Just fir command "git status" and you will find below message on screen.
 $ git status
