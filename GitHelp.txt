@@ -32,16 +32,69 @@ nothing added to commit but untracked files present (use "git add" to track)
 Here we are adding for just staging the chnages for commit
 Working copy>staging area>repository
 4. git commit -m "Added GitHelp.txt" #commiting the change and -m is here for message
-5. Alternate way of adding and commit 'git commit -a' and enter your message and exit the editor
 Note: It is good practic to fire the check everytime at the end of the day if we have anything to commit or not.
 Just fir command "git status" and you will find below message on screen.
 $ git status
 On branch master
 nothing to commit, working tree clean
+
+#Editing the file
+
+If you further edit the file you just need to follow the same procedure as we add the file to repository.
+Alternate way of adding and commit after editing the file is 'git commit -am <Mesage>' 
+You can check any time difference before adding the file for commit. Here is command 'git diff'
+If file is added for commit still we can check the diff by command git diff --staged
+####### Removing the file
+git rm 'FileName' and commit the file after delete it
+####### Renaming the file
+mv file1 file2
+git rm file1
+git add file2
+git commit -m "Renamed the file"
+
+Alternate way
+git mv file1 file2 
+git commit -m "message"
+
+###########Checkout Before Change Staged for Commit#################
+git checkout -- fileName #Revert the changes 
+
+########Staging to Unstaging of the file
+If we have added the file for commit, means we have put the file from local copy to stage area for commit. But after some time we realise
+that we have done big mistake, we can move the file from staging area to unstaging area(local copy)
+git reset HEAD fileName
+
+########### Getting Older Version From Repository#################
+
+git checkout commitno(just type few char of commitno) -- fileName
+you can check commit no by checking log(git log filename)
+
+#############Pushing it Github Repo##########
+Before pushing your code to gitHub you have to add remote. It is just like conencting your local to Github Repository
+git remote add "Give name of remote Repo" https://github.com/rahat4bitwise/FirstProject.git
+git remote #it will print your remote repo name
+ 
+ git push -u "remoteRepoName" master #here is master is branch name
+ it will ask your username and passwrd
+
+############ Branching ###############
+Branching of the project is simple copying the master project into your branch. It is just like creating the project seeding from the APP MAIN project.
+############ Clone of the project ###############
+Cloning is the copying of of the code from github repo to your local
+
+git clone  <url of the project>
+
+By default if will clone master branch, if you want to clone the specific branch use below command
+
+git clone -b <branchName> <url>
+
+###############Pull Request###################
+Pull Request is done by developer to merge the code into master branch
+	
 ############Other Command ##################
 
 git log #For checking log wh has commited the file 
-
+git log FileName # for specific file
 git log --author "rahat4bitwise" # Check for specific user who has commited
 
 
